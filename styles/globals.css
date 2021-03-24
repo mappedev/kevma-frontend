@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./components/flex.css";
+@import "./components/button.css";
+@import "./components/card.css";
+@import "./components/transition.css";

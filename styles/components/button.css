@@ -1,0 +1,20 @@
+.btn {
+  @apply rounded-full px-2 py-1;
+}
+
+.btn:focus {
+  @apply outline-none;
+}
+
+.btn-darkmode {
+  @apply bg-white-secondary flex relative shadow-inner px-0 w-36 dark:bg-black-secondary;
+}
+
+.btn-darkmode::after {
+  content: "";
+  @apply bg-yellow-600 w-1/2 h-full rounded-full absolute top-0 left-0 shadow-lg transition-transform;
+}
+
+.btn-darkmode.active:after {
+  @apply transform translate-x-full;
+}
