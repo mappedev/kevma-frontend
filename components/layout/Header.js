@@ -4,23 +4,21 @@ import { useTheme } from "next-themes";
 
 export const Header = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const [darkModeActive, setDarkModeActive] = useState(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  const handleToggle = () => {
+  const switchTheme = () => {
     if (isMounted) {
-      setDarkModeActive((darkModeActive) => !darkModeActive);
       setTheme(theme === "dark" ? "light" : "dark");
     }
   };
 
   return (
     <header className="bg-white-primary h-24 w-full flex items-center justify-between px-4 z-50 fixed shadow sm:px-5 dark:bg-black-primary">
-      <Link href="/">
+      <Link href="/characters">
         <a>
           <h1 className="font-bold text-3xl sm:text-4xl text-orange-primary">
             KevMa
@@ -28,8 +26,10 @@ export const Header = () => {
         </a>
       </Link>
       <button
-        className={`btn btn-darkmode ${darkModeActive && "active"}`}
-        onClick={handleToggle}
+        className={`btn btn-darkmode ${
+          isMounted && theme === "dark" && "active"
+        }`}
+        onClick={switchTheme}
       >
         <p className="z-50 w-1/2">Claro</p>
         <p className="z-50 w-1/2">Oscuro</p>

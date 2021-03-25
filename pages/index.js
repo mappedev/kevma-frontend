@@ -1,4 +1,10 @@
+import Head from "next/head";
+
 export default function Home() {
-  return null;
+  return (
+    <Head>
+      <title>KevMa</title>
+    </Head>
+  );
   // redirect to /characters
 }

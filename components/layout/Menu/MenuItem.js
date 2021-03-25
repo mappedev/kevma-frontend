@@ -7,12 +7,12 @@ export const MenuItem = ({ href, title, icon = null }) => {
   return (
     <li
       className={`md:mx-5 md:my-4 transition-colors-200 ${
-        asPath === href ? "text-orange-primary" : ""
+        asPath === href && "text-orange-primary"
       } hover:text-orange-primary`}
     >
       <Link href={href}>
         <a>
-          {icon} {title}
+          {icon ?? "I"} {title}
         </a>
       </Link>
     </li>
