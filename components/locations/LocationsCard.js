@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-import { Card } from "components/Card";
+import { CardItem } from "components/ui/cards/CardItem";
 
 export const LocationsCard = ({ name, type, dimension }) => (
   <li className="w-full">
-    <Card>
+    <CardItem>
       <div className="mb-4">
         <Link href="#">
           <a className="transition-colors-200 hover:text-orange-primary">
@@ -17,6 +17,6 @@ export const LocationsCard = ({ name, type, dimension }) => (
         <h3 className="text-gray-400">Dimensión</h3>
         <p>{dimension}</p>
       </div>
-    </Card>
+    </CardItem>
   </li>
 );

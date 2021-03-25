@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import { Main } from "layouts/Main";
 import { CharacterCard } from "components/characters/CharacterCard";
+import { CardAddOneMore } from "components/ui/cards/CardAddOneMore";
 
 export default function Characters() {
   return (
@@ -9,7 +10,7 @@ export default function Characters() {
       <Head>
         <title>KevMa - Characters</title>
       </Head>
-      <ul className="grid grid-cols-1 gap-6 justify-items-center xl:grid-cols-2">
+      <ul className="list xl:grid-cols-2">
         <CharacterCard
           fullname="Prueba Prueba"
           status="Alive"
@@ -66,6 +67,7 @@ export default function Characters() {
           lastKnowLocation="Monte piedad"
           firstSeenLocation="Caracas"
         />
+        <CardAddOneMore />
       </ul>
     </>
   );

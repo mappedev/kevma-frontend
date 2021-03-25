@@ -25,15 +25,18 @@ export const Header = () => {
           </h1>
         </a>
       </Link>
-      <button
-        className={`btn btn-darkmode ${
-          isMounted && theme === "dark" && "active"
-        }`}
-        onClick={switchTheme}
-      >
-        <p className="z-50 w-1/2">Claro</p>
-        <p className="z-50 w-1/2">Oscuro</p>
-      </button>
+      <div className="inline-flex">
+        <button className="mr-2 md:mr-4">I+</button>
+        <button
+          className={`btn btn-darkmode ${
+            isMounted && theme === "dark" && "active"
+          }`}
+          onClick={switchTheme}
+        >
+          <p className="z-50 w-1/2">Claro</p>
+          <p className="z-50 w-1/2">Oscuro</p>
+        </button>
+      </div>
     </header>
   );
 };

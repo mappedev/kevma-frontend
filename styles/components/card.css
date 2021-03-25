@@ -1,3 +1,7 @@
 .card {
-  @apply bg-white-primary bg-opacity-95 rounded-lg shadow overflow-hidden w-full p-3 relative dark:bg-black-primary;
+  @apply bg-white-primary bg-opacity-95 rounded-lg shadow overflow-hidden w-full p-3 dark:bg-black-primary;
+}
+
+.card-item {
+  @apply relative;
 }

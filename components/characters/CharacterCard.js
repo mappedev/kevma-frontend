@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Card } from "components/Card";
+import { CardItem } from "components/ui/cards/CardItem";
 
 export const CharacterCard = ({
   fullname,
@@ -18,8 +18,8 @@ export const CharacterCard = ({
       : "bg-normal";
 
   return (
-    <li className="w-full">
-      <Card additionalClass='p-0 sm:inline-flex sm:max-w-xl"'>
+    <li className="w-full sm:max-w-xl 2xl:max-w-none">
+      <CardItem additionalClass="p-0 sm:inline-flex">
         <div className="w-full h-64 relative sm:w-56 sm:h-auto">
           <Image
             src="https://rickandmortyapi.com/api/character/avatar/210.jpeg"
@@ -58,7 +58,7 @@ export const CharacterCard = ({
             </Link>
           </div>
         </div>
-      </Card>
+      </CardItem>
     </li>
   );
 };
