@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTheme } from "next-themes";
 
 export const Header = () => {
@@ -25,16 +26,37 @@ export const Header = () => {
           </h1>
         </a>
       </Link>
-      <div className="inline-flex">
-        <button className="mr-2 md:mr-4">I+</button>
+      <div className="flex items-center">
+        <button className="mr-2 h-8 md:mr-4">
+          <Image
+            src={`/icons/add-character${theme === "dark" ? "-dark" : ""}.svg`}
+            alt="Icono que hace referencia a agregar un nuevo personaje"
+            width={32}
+            height={32}
+          />
+        </button>
         <button
           className={`btn btn-darkmode ${
             isMounted && theme === "dark" && "active"
           }`}
           onClick={switchTheme}
         >
-          <p className="z-50 w-1/2">Claro</p>
-          <p className="z-50 w-1/2">Oscuro</p>
+          <span className="z-50 w-1/2 h-6">
+            <Image
+              src="/icons/sun.svg"
+              alt="Icono que referencia un sol, indicando que el tema está en claro"
+              width={24}
+              height={24}
+            />
+          </span>
+          <span className="z-50 w-1/2 h-6">
+            <Image
+              src="/icons/moon.svg"
+              alt="Icono que referencia una luna, indicando que el tema está en oscuro"
+              width={24}
+              height={24}
+            />
+          </span>
         </button>
       </div>
     </header>
