@@ -1,10 +1,8 @@
 import Link from "next/link";
 
-import { CardItem } from "components/ui/cards/CardItem";
-
 export const EpisodesCard = ({ name, airDate, episode }) => (
   <li className="w-full">
-    <CardItem>
+    <div className="card">
       <div className="mb-4">
         <Link href="#">
           <a className="transition-colors-200 hover:text-orange-primary">
@@ -17,6 +15,6 @@ export const EpisodesCard = ({ name, airDate, episode }) => (
         <h3 className="text-gray-400">Temporada y capítulo</h3>
         <p>{episode}</p>
       </div>
-    </CardItem>
+    </div>
   </li>
 );
